@@ -2,10 +2,11 @@
 
 /**
  * ch - function to return char
- * @character: list given
+ * @: list given
  * Return: number of char printed
  */
-int print_char(va_list character)
+int print_char(va_list args)
 {
-	return (_putchar(va_arg(character, int)));
+	return (_putchar(args, int));
 }
+
