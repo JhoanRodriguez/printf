@@ -11,6 +11,7 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int print_char(va_list character);
 int print_str();
+int _int(va_list list);
 /**
  * struct fmt - function to check for formats
  * @type: The format to print
