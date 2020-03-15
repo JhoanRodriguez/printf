@@ -6,6 +6,7 @@
 #include <unistd.h>
 int _putchar(char c);
 int _strlen(char *s);
+nt counter (int y);
 int _printf(const char *format, ...);
 /**
  * struct fmt - function to check for formats
