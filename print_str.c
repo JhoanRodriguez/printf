@@ -5,12 +5,12 @@
  * @string: list
  * Return: number of char
  */
-int print_str(va_list string)
+int print_str(va_list args)
 {
 	int i;
 	char *str;
 
-	str = va_arg(string, char *);
+	str = va_arg(args, char *);
 
 	if (str == NULL)
 		str = "NULL";
@@ -19,6 +19,7 @@ int print_str(va_list string)
 
 	while (str[i] != '\0')
 		i+= _putchar(str[i]);
+
 	return (i);
 }
 
