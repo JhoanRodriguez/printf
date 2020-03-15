@@ -8,8 +8,7 @@
 int _int(va_list list)
 {
 	int *ptr;
-
-	int x = va_arg(list, int), y;
+	int x = va_arg(list, int), y, i;
 
 	y = counter(x);
 	ptr = malloc(y);

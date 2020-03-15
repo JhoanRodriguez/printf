@@ -12,6 +12,7 @@ int _putchar(char c);
 int _int(va_list list);
 int print_char(va_list args);
 int print_str(va_list args);
+int print_int(va_list args);
 /**
  * struct fmt - function to check for formats
  * @type: The format to print
