@@ -8,8 +8,8 @@ int _putchar(char c);
 int _strlen(char *s);
 int counter (int y);
 int _printf(const char *format, ...);
-int print_char(va_list character);
-int print_str();
+int print_char(va_list args);
+int print_str(va_list args);
 /**
  * struct fmt - function to check for formats
  * @type: The format to print
