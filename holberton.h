@@ -8,6 +8,8 @@ int _putchar(char c);
 int _strlen(char *s);
 int counter (int y);
 int _printf(const char *format, ...);
+int _putchar(char c);
+int _int(va_list list);
 int print_char(va_list args);
 int print_str(va_list args);
 /**
