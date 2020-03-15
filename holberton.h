@@ -6,9 +6,8 @@
 #include <unistd.h>
 int _putchar(char c);
 int _strlen(char *s);
-nt counter (int y);
+int counter (int y);
 int _printf(const char *format, ...);
-int _putchar(char c);
 int print_char(va_list character);
 int print_str();
 /**
