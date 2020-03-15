@@ -1,0 +1,13 @@
+#include "holberton.h"
+
+/**
+ * _int - function to print integers
+ * @integ: list printed
+ * Return: Return count
+ */
+int _int(va_list list)
+{
+	int x = va_arg(list, int);
+	
+	
+}
