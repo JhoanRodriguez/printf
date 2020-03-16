@@ -22,17 +22,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	while (i < 5)
-	{
-		while (form[i].type[j] != 0)
-		{
-			if (*(form[i].type[j] == *format))
-				form[i].f;
-
-			j++;
-		}
-		i++;
-	}
 	va_start(list, format);
-
+	return (0);
 }
+

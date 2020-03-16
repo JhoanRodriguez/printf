@@ -6,13 +6,13 @@
 #include <unistd.h>
 int _putchar(char c);
 int _strlen(char *s);
-int counter (int y);
 int _printf(const char *format, ...);
 int _putchar(char c);
-int _int(va_list list);
+int _int(va_list args);
 int print_char(va_list args);
 int print_str(va_list args);
 int print_int(va_list args);
+int counter (int i);
 /**
  * struct fmt - function to check for formats
  * @type: The format to print
@@ -21,6 +21,6 @@ int print_int(va_list args);
 typedef struct Format
 {
 	char *type;
-	void (*f)();
+	int (*f)();
 } fmt;
 #endif
