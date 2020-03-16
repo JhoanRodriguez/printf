@@ -32,4 +32,4 @@ char *convert(long int num, int base)
 	return (ptr);
 }
 
-//All credits to Narnat: https://gist.github.com/narnat/95733cd0ad7bfac0d90697292914c407
+/*All credits to Narnat: https://gist.github.com/narnat/95733cd0ad7bfac0d90697292914c407*/
