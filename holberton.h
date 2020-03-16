@@ -11,6 +11,7 @@ int _putchar(char c);
 int _int(va_list args);
 int print_char(va_list args);
 int print_str(va_list args);
+int print_per(va_list args);
 int print_int(va_list args);
 int counter (int i);
 /**
@@ -21,6 +22,6 @@ int counter (int i);
 typedef struct Format
 {
 	char *type;
-	int (*f)();
+	int (*f)(va_list);
 } fmt;
 #endif

@@ -4,21 +4,57 @@
  * @format: string being passed
  * Return: char to be printed
  */
-int _printf(const char *format, ...)
+int (*get_fmt_func(const char s))(va_list)
 {
-	va_list list;
-
-
-	fmt form[] ={
+	fmt format[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"i", print_int},
-		{"d", print_int}
+		{"%", print_per},
+		{NULL, NULL}
 	};
+	int i = 0;
+
+	while (i < 3)
+	{
+		if (*(format[i].type) == s)
+		{
+			return (format[i].f);
+		}
+		i++;
+	}
+	return (0);
+}
+
+int _printf(const char *format, ...)
+{
+	va_list args;
+	int c;
+	int i;
+	int (*ptr)(va_list);
+
+	c = 0;
+	i = 0;
+
 	if (format == NULL)
 		return (-1);
 
-	va_start(list, format);
-	return (0);
+	va_start(args, format);
+	while (format[i] != 0)
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			ptr = get_fmt_func(format[i]);
+			if (ptr != NULL)
+				c+= ptr(args);
+
+		}
+		else
+			c+= _putchar(format[i]);
+
+		i++;
+	}
+	va_end(args);
+	return (c);
 }
 

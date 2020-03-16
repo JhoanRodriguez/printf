@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * str - prints string to stdout
+ * print_str - prints string to stdout
  * @string: list
  * Return: number of char
  */
@@ -17,7 +17,7 @@ int print_str(va_list args)
 
 	i = 0;
 
-	while (str[i] != '\0')
+	while (str[i] != 0)
 		i+= _putchar(str[i]);
 
 	return (i);
