@@ -7,11 +7,7 @@
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int i;
-	int j;
 
-	i = 0;
-	j = 0;
 
 	fmt form[] ={
 		{"c", print_char},
