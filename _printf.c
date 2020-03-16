@@ -10,11 +10,13 @@ int (*get_fmt_func(const char s))(va_list)
 		{"c", print_char},
 		{"s", print_str},
 		{"%", print_per},
+		{"d", print_int},
+		{"i", print_int},
 		{NULL, NULL}
 	};
 	int i = 0;
 
-	while (i < 3)
+	while (i < 7)
 	{
 		if (*(format[i].type) == s)
 		{

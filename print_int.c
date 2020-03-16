@@ -1,28 +1,25 @@
 #include "holberton.h"
 
 /**
- * _int - function to print integers
+ * print_int - function to print integers
  * @integ: list printed
  * Return: Return count
  */
-int _int(va_list list)
+int print_int(va_list args)
 {
-	int *ptr;
-	int x = va_arg(list, int), y, i;
+	int i;
+	char *str;
 
-	y = counter(x);
-	ptr = malloc(y);
+	str = convert(va_arg(args, int),10);
 
-	for (; y > 0; y--)
-	{
-		ptr[y - 1] = x / 10;
-		x = x / 10;
-	}
-	y = counter(x);
-	for (i = 0; i < y; i++)
-	{
-		_putchar (ptr[i] + 48);
-	}
-	return (0);
+	if (str == NULL)
+		str = "NULL";
 
+	i = 0;
+
+	while (str[i] != 0)
+		i+= _putchar(str[i]);
+
+	return (i);
 }
+

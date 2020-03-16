@@ -5,15 +5,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 int _putchar(char c);
-int _strlen(char *s);
 int _printf(const char *format, ...);
 int _putchar(char c);
-int _int(va_list args);
 int print_char(va_list args);
 int print_str(va_list args);
 int print_per(va_list args);
 int print_int(va_list args);
-int counter (int i);
+char *convert(long int num, int base);
 /**
  * struct fmt - function to check for formats
  * @type: The format to print
