@@ -39,14 +39,19 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int c;
+	int l;
 	int i;
 	int (*ptr)(va_list);
 
 	c = 0;
 	i = 0;
+	l = 0;
 
 	if (format == NULL)
 		return (-1);
+
+	while (format[l] != 0)
+		l++;
 
 	va_start(args, format);
 	while (format[i] != 0)
@@ -57,7 +62,7 @@ int _printf(const char *format, ...)
 			ptr = get_fmt_func(format[i]);
 			if (ptr == NULL)
 			{
-				if (format[i + 1] == 0 && format[i - 1] == 37)
+				if (format[i] == 0 || format[l] != '\n')
 					return (-1);
 
 				c += _putchar(format[i - 1]);
