@@ -11,12 +11,11 @@ int (*get_fmt_func(const char s))(va_list)
 		{"s", print_str},
 		{"%", print_per},
 		{"d", print_int},
-		{"i", print_int},
-		{NULL, NULL}
+		{"i", print_int}
 	};
 	int i = 0;
 
-	while (i < 7)
+	while (i < 5)
 	{
 		if (*(format[i].type) == s)
 		{
@@ -49,7 +48,8 @@ int _printf(const char *format, ...)
 			ptr = get_fmt_func(format[i]);
 			if (ptr != NULL)
 				c+= ptr(args);
-
+			else
+				break;
 		}
 		else
 			c+= _putchar(format[i]);
