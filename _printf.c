@@ -14,11 +14,10 @@ int (*get_fmt_func(const char s))(va_list)
 		{"i", print_int},
 		{"b", print_bin},
 		{"u", print_unsigned},
-		{NULL,NULL}
 	};
 	int i = 0;
 
-	while (i < 8)
+	while (i < 7)
 	{
 		if (*(format[i].type) == s)
 		{
@@ -49,8 +48,9 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			ptr = get_fmt_func(format[i]);
-			if (format[i] == '\0')
+			if (format[i] == 0)
 				return (-1);
+
 			if (ptr != NULL)
 				c+= ptr(args);
 
