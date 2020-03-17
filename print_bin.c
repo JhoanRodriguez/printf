@@ -15,7 +15,7 @@ int print_bin(va_list args)
 
 	x = _sqrt(numb);
 
-	while (_pow(2,x) > numb)
+	while (_pow(2, x) > numb)
 	{
 		x--;
 	}

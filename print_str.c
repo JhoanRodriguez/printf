@@ -2,7 +2,7 @@
 
 /**
  * print_str - prints string to stdout
- * @string: list
+ * @args: list
  * Return: number of char
  */
 int print_str(va_list args)

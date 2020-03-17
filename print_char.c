@@ -2,8 +2,8 @@
 
 /**
  * print_char - function to return char
- * @: list given
- * Return: number of char printed
+ * @args: list * Return: number of char printed
+ * Return: Return char
  */
 int print_char(va_list args)
 {
