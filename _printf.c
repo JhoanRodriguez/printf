@@ -16,9 +16,10 @@ int (*get_fmt_func(const char s))(va_list)
 		{"i", print_int},
 		{"b", print_bin},
 		{"u", print_unsigned},
+		{"o", _oct}
 	};
 
-	while (i < 7)
+	while (i < 8)
 	{
 		if (*(format[i].type) == s)
 		{
