@@ -4,19 +4,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-int _putchar(char c);
-int _printf(const char *format, ...);
-int _putchar(char c);
 int print_char(va_list args);
 int print_str(va_list args);
 int print_per(va_list args);
 int print_int(va_list args);
 char *convert(long int num, int base);
-int _pow(int x, int y);
-int _sqrt(int n);
 int print_bin(va_list args);
 int print_unsigned (va_list args);
-int _oct(va_list args);
+int print_oct(va_list args);
+int _pow(int x, int y);
+int _sqrt(int n);
+int _putchar(char c);
+int _printf(const char *format, ...);
 /**
  * struct fmt - function to check for formats
  * @type: The format to print
