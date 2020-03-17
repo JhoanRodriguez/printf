@@ -57,7 +57,7 @@ int _printf(const char *format, ...)
 			ptr = get_fmt_func(format[i]);
 			if (ptr == NULL)
 			{
-				if (format[i] == 0 || ptr == NULL)
+				if (format[i + 1] == 0 && format[i - 1] == 37)
 					return (-1);
 
 				c += _putchar(format[i - 1]);
