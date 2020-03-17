@@ -16,13 +16,10 @@ int (*get_fmt_func(const char s))(va_list)
 		{"i", print_int},
 		{"b", print_bin},
 		{"u", print_unsigned},
-<<<<<<< HEAD
-		{NULL, NULL},
-=======
 		{"o", _oct},
 		{"X", _Hex},
-		{"x", _hex}
->>>>>>> d13c0ec7e97c7009d60419add68619075930c3b1
+		{"x", _hex},
+		{NULL, NULL},
 	};
 
 	while (i < 10)
