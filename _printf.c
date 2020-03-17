@@ -14,6 +14,7 @@ int (*get_fmt_func(const char s))(va_list)
 		{"i", print_int},
 		{"b", print_bin},
 		{"u", print_unsigned},
+		{NULL, NULL},
 	};
 	int i = 0;
 
@@ -44,21 +45,23 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (format[i] != 0)
 	{
-		if (format[i] == '%')
+		if (format[i] == 37)
 		{
 			i++;
 			ptr = get_fmt_func(format[i]);
-			if (format[i] == 0)
-				return (-1);
-
-			if (ptr != NULL)
+			if (ptr == NULL)
+			{
+				if (format[i] == 0)
+					return (-1);
+				else
+				{
+					c+= _putchar(format[i - 1]);
+					c+= _putchar(format[i]);
+				}
+			}
+			else
 				c+= ptr(args);
 
-			else
-			{
-				i--;
-				_putchar(format[i]);
-			}
 		}
 		else
 			c+= _putchar(format[i]);
