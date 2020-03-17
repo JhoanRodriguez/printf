@@ -51,7 +51,10 @@ int _printf(const char *format, ...)
 			if (ptr != NULL)
 				c+= ptr(args);
 			else
-				break;
+			{
+				i--;
+				_putchar(format[i]);
+			}
 		}
 		else
 			c+= _putchar(format[i]);
@@ -61,4 +64,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (c);
 }
-
