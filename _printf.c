@@ -13,7 +13,8 @@ int (*get_fmt_func(const char s))(va_list)
 		{"d", print_int},
 		{"i", print_int},
 		{"b", print_bin},
-		{"u", print_unsigned}
+		{"u", print_unsigned},
+		{NULL,NULL}
 	};
 	int i = 0;
 
