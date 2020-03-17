@@ -25,8 +25,7 @@ int print_unsigned (va_list args)
 	}
 
 	while (str[i] != '\0')
-	{
-		i+= _putchar(str[i]);
-	}
+		i += _putchar(str[i]);
+
 	return (i);
 }
