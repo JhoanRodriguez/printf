@@ -2,7 +2,7 @@
 
 /**
  * print_unsigned - function to print integers
- * @integ: list printed
+ * @args: list printed
  * Return: Return count
  */
 int print_unsigned (va_list args)
@@ -10,7 +10,7 @@ int print_unsigned (va_list args)
 	int i;
 	char *str;
 
-	str = convert(va_arg(args, unsigned int),10);
+	str = convert(va_arg(args, unsigned int), 10);
 
 	if (str == NULL)
 	{

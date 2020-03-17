@@ -3,8 +3,9 @@
  * convert - converter function, a clone of itoa
  * @num: number
  * @base: base
- *
  * Return: string
+ * All credits to Narnat:
+ * https://gist.github.com/narnat/95733cd0ad7bfac0d90697292914c407
  */
 char *convert(long int num, int base)
 {
@@ -31,5 +32,3 @@ char *convert(long int num, int base)
 		*--ptr = sign;
 	return (ptr);
 }
-
-/*All credits to Narnat: https://gist.github.com/narnat/95733cd0ad7bfac0d90697292914c407*/

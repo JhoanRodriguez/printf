@@ -1,11 +1,13 @@
 #include "holberton.h"
 /**
- * _printf - prints output according to format
+ * get_fmt:func - database of the funcions
  * @format: string being passed
  * Return: char to be printed
  */
 int (*get_fmt_func(const char s))(va_list)
 {
+	int i = 0;
+
 	fmt format[] = {
 		{"c", print_char},
 		{"s", print_str},
@@ -15,7 +17,6 @@ int (*get_fmt_func(const char s))(va_list)
 		{"b", print_bin},
 		{"u", print_unsigned},
 	};
-	int i = 0;
 
 	while (i < 7)
 	{
@@ -27,7 +28,11 @@ int (*get_fmt_func(const char s))(va_list)
 	}
 	return (0);
 }
-
+/**
+ * _printf - prints output according to format
+ * @format: string being passed
+ * Return: char to be printed
+ */
 int _printf(const char *format, ...)
 {
 	va_list args;
