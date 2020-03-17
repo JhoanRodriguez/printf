@@ -48,8 +48,11 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			ptr = get_fmt_func(format[i]);
+			if (format[i] == '\0')
+				return (-1);
 			if (ptr != NULL)
 				c+= ptr(args);
+
 			else
 			{
 				i--;
