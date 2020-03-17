@@ -16,6 +16,9 @@ int _pow(int x, int y);
 int _sqrt(int n);
 int print_bin(va_list args);
 int print_unsigned (va_list args);
+int _oct(va_list args);
+int _Hex(va_list args);
+int _hex(va_list args);
 /**
  * struct fmt - function to check for formats
  * @type: The format to print

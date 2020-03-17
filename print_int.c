@@ -2,7 +2,7 @@
 
 /**
  * print_int - function to print integers
- * @integ: list printed
+ * @args: list printed
  * Return: Return count
  */
 int print_int(va_list args)
@@ -10,7 +10,7 @@ int print_int(va_list args)
 	int i;
 	char *str;
 
-	str = convert(va_arg(args, int),10);
+	str = convert(va_arg(args, int), 10);
 
 	if (str == NULL)
 		str = "NULL";
