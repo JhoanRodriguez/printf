@@ -38,8 +38,8 @@ int (*get_fmt_func(const char s))(va_list)
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int c;
-	int i;
+	int c, i;
+
 	int (*ptr)(va_list);
 
 	c = 0;
@@ -50,9 +50,9 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 	while (format[i] != 0)
-	{				if (format[i] == 0)
+	{
+		if (format[i] == 0)
 		return (-1);
-
 
 		if (format[i] == 37)
 		{
