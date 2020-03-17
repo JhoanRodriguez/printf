@@ -9,4 +9,4 @@
 
 # Ignore all main.c files
 main.c
-
+!man_3_printf
