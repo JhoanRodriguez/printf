@@ -12,7 +12,8 @@ int (*get_fmt_func(const char s))(va_list)
 		{"%", print_per},
 		{"d", print_int},
 		{"i", print_int},
-		{NULL, NULL}
+		{"b", print_bin},
+		{"u", print_unsigned}
 	};
 	int i = 0;
 
@@ -49,7 +50,8 @@ int _printf(const char *format, ...)
 			ptr = get_fmt_func(format[i]);
 			if (ptr != NULL)
 				c+= ptr(args);
-
+			else
+				break;
 		}
 		else
 			c+= _putchar(format[i]);
