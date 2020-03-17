@@ -15,6 +15,7 @@ char *convert(long int num, int base);
 int _pow(int x, int y);
 int _sqrt(int n);
 int print_bin(va_list args);
+int print_unsigned (va_list args);
 /**
  * struct fmt - function to check for formats
  * @type: The format to print

@@ -10,7 +10,6 @@ int print_bin(va_list args)
 	int numb, x, y = 0;
 
 	numb = va_arg(args, int);
-
 	if (numb == 0)
 		return (0);
 
