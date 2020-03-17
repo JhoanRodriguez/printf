@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 	i = 0;
 	l = 0;
 
-	if (format[0] == NULL)
+	if (format == 0)
 		return (-1);
 
 	while (format[l] != 0)
@@ -55,7 +55,10 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 	while (format[i] != 0)
-	{
+	{				if (format[i] == 0)
+		return (-1);
+
+
 		if (format[i] == 37)
 		{
 			i++;
