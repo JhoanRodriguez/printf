@@ -45,11 +45,11 @@ int _printf(const char *format, ...)
 	c = 0;
 	i = 0;
 
-	if (!format)
+	if (format == NULL)
 		return (-1);
 
 	va_start(args, format);
-	while (format)
+	while (format[i] != 0)
 	{				if (format[i] == 0)
 		return (-1);
 
