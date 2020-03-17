@@ -18,7 +18,7 @@ int (*get_fmt_func(const char s))(va_list)
 	};
 	int i = 0;
 
-	while (i < 7)
+	while (i < 8)
 	{
 		if (*(format[i].type) == s)
 		{
