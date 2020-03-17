@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 	i = 0;
 	l = 0;
 
-	if (format == NULL)
+	if (format[0] == NULL)
 		return (-1);
 
 	while (format[l] != 0)
