@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * get_fmt:func - database of the funcions
- * @format: string being passed
+ * get_fmt_func - database of the funcions
+ * @s: string being passed
  * Return: char to be printed
  */
 int (*get_fmt_func(const char s))(va_list)
@@ -59,18 +59,17 @@ int _printf(const char *format, ...)
 			{
 				if (format[i] == 0)
 					return (-1);
-				else
-				{
-					c+= _putchar(format[i - 1]);
-					c+= _putchar(format[i]);
-				}
+
+				c += _putchar(format[i - 1]);
+				c += _putchar(format[i]);
+
 			}
 			else
-				c+= ptr(args);
+				c += ptr(args);
 
 		}
 		else
-			c+= _putchar(format[i]);
+			c += _putchar(format[i]);
 
 		i++;
 	}
