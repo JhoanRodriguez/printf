@@ -12,6 +12,8 @@ char *convert(long int num, int base);
 int print_bin(va_list args);
 int print_unsigned (va_list args);
 int print_oct(va_list args);
+int print_hex(va_list args);
+int print_Hex(va_list args);
 int _pow(int x, int y);
 int _sqrt(int n);
 int _putchar(char c);
