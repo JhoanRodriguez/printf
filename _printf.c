@@ -11,11 +11,12 @@ int (*get_fmt_func(const char s))(va_list)
 		{"s", print_str},
 		{"%", print_per},
 		{"d", print_int},
-		{"i", print_int}
+		{"i", print_int},
+		{"b", print_bin}
 	};
 	int i = 0;
 
-	while (i < 5)
+	while (i < 6)
 	{
 		if (*(format[i].type) == s)
 		{
