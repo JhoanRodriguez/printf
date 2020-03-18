@@ -37,9 +37,10 @@ holberton.h File that contains all the libraries and prototypes
 
 NOTES
 Currently, the program doesn't account for flags, fields, precision, or length modifiers.
-SEE ALSO
 
+SEE ALSO
 printf(3)
+
 AUTHOR
 
 Jhoan Rodríguez, Samuel Gómez
