@@ -33,7 +33,7 @@ char *convert2(long int num, int base)
 	return (ptr);
 }
 /**
- * print_HEX - function to print octal
+ * print_Hex - function to print hexadecimal uppercase
  * @args: list being passed
  * Return: updated count
  */
@@ -50,7 +50,7 @@ int print_Hex(va_list args)
 	i = 0;
 
 	while (str[i] != 0)
-		i+= _putchar(str[i]);
+		i += _putchar(str[i]);
 
 	return (i);
 }

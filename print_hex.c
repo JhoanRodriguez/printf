@@ -17,7 +17,7 @@ int print_hex(va_list args)
 	i = 0;
 
 	while (str[i] != 0)
-		i+= _putchar(str[i]);
+		i = i + _putchar(str[i]);
 
 	return (i);
 }
