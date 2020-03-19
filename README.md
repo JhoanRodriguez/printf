@@ -1,46 +1,70 @@
-Date 17/3/2020
+# _printf
+The _printf function is a custom implementation of the C programming function printf. It returns the number of characters printed and writes the output to stdout. It includes the conversion specifiers :  c, s, %, d, x, X, u, o, rot13 and i.
 
-_printf(3) 
+## Example
+```c
+#include "holberton.h"
+_printf("The %s jumped %d times! -%c", "dog", 7, 'C');
+```
+output : The dog jumped 7 times! -C
 
-NAME _printf - custom function that format and print data as "printf" SYNOPSIS Format arg0, arg1 ... 
+## Project Requirements
+- All files will be compiled on Ubuntu 14.04 LTS
+- Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+- Your code should use the Betty style
+- You are not allowed to use global variables
+- Authorized functions and macros:
+- write (man 2 write)
+- malloc (man 3 malloc)
+- free (man 3 free)
+- va_start (man 3 va_start)
+- va_end (man 3 va_end)
+- va_copy (man 3 va_copy)
+- va_arg (man 3 va_arg)
 
-DESCRIPTION 
+# Custom printf function
 
-print arguments under the format (char, string, integer, decimal ,binary , Hex , hex , octal)
-according to the next options:
+## Files and functions
+* **_putchar.c**:
+  * int _putchar(char c) - function to print char
 
-%c to print chars
-%s to print strings
-%i to print Integers 
-%d to print Decimals 
-%b to print Binary base 
-%x to print Hexadecimal base in lowercase 
-%X to print Hexadecimal base in Uppercase 
-%o to print Octal base 
+* **_strlen.c**:
+  * int _strlen(char *string) - gets string length
 
-EXAMPLE Printing a char using _printf function:
+* **get_bin.c**:
+  * int _bin(va_list bin) - function to print binary
 
-_printf("Character: %c ", 'H');
-Output - Character: H
+* **print_char.c**:
+  * int ch(va_list character) - function to return char
 
-Printing a string using _printf function:
-_printf("String: %s ", "I am a string !");
-Output - String: I am a string !
+* **print_hex.c**:
+  * int _hex_str(unsigned int n, unsigned int hex, char alpha) - converts the number from base 10 to hex lowercase
+  
+  * **print_Hex.c**:
+  * int print_Hex_str(unsigned int n, unsigned int hex, char alpha) - converts the number from base 10 to hex uppercase
 
-Printing a Binary using _printf function:
-_printf("Binary number : %c ", 10);
-Output - Binary Number : 1010 
+* **print_int.c**:
+  * int _int(va_list integ) - function to print integers
 
-FILES
-_printf.c File that contains the main function. 
-holberton.h File that contains all the libraries and prototypes
+* **print_oct.c**:
+  * int _oct(va_list octo) - function to print octal
 
-NOTES
-Currently, the program doesn't account for flags, fields, precision, or length modifiers.
+* **get_str.c**:
+  * int str(va_list *s) - prints string to stdout
 
-SEE ALSO
-printf(3)
+* **print_unsigned**:
+  * int print_unsigned(va_list unsign) - unsigned int print to stdout
 
-AUTHOR
+* **holberton.h**: header file
 
-Jhoan Rodríguez, Samuel Gómez
+* **man_3_printf**: _printf man page
+
+* **printf.c**: main custom _printf function
+  * int print_op(const char *format, fmt_t *print_arr, va_list list) - function to check which specifier to print
+  * int _printf(const char *format, ...) - prints output according to format
+
+### Notes
+Our program does not handle buffer handling, flag characters, field width, precision, or length modifiers.
+
+### Authors
+Jhoan Rodríguez & Samuel Gómez
